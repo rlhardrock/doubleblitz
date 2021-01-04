@@ -1,6 +1,6 @@
-LARAVEL
+LARAVEL   pass laravelJETSTREAM
 sudo gedit /etc/hosts 
-//configura dominio local
+--> configura dominio local y en .env
 
 usar composer directo
 
@@ -9,7 +9,8 @@ composer require laravel/jetstream
 php artisan jetstream:install livewire
 php artisan jetstream:install livewire --teams
 npm install && npm run dev
---> crear base de datos y anexar info  en .env
+--> crear base de datos y anexar info  en .env   resetear apache2
+sudo service apache2 restart
 php artisan migrate
 
 
@@ -19,10 +20,11 @@ php artisan serve
 http://127.0.0.1:8000
 
 
-
 php artisan make:
 
-php artisan make:controller HiveController
+
+
+php artisan make:controller CLassController
 
 configurar en .dev el SGBD
 
