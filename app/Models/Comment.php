@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Video extends Model
+class Comment extends Model
 {
     use HasFactory;
 
@@ -14,8 +14,8 @@ class Video extends Model
         return $this->belongsTo('App\Models\User');
     }
 
-    //RELATION ONE TO MANY POLIMORPHIC
-    public function comment(){
-        return $this->morphMany('App\Models\Comment','commentable');
+    //RELATION POLIMORPHIC
+    public function commentable(){
+        return $this->morphTo();
     }
 }
