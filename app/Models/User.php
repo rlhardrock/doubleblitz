@@ -75,4 +75,9 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Post');
     }
 
+    //RELACION ONE TO MANY
+    public function videos(){
+        return $this->hasMany('App\Models\Video');
+    }
+
 }
