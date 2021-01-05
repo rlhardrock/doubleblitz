@@ -70,14 +70,19 @@ class User extends Authenticatable
         return $this->hasOne('App\Models\Profile');
     }
 
-    //RELACION ONE TO MANY
+    //RELATION ONE TO MANY
     public function posts(){
         return $this->hasMany('App\Models\Post');
     }
 
-    //RELACION ONE TO MANY
+    //RELATION ONE TO MANY
     public function videos(){
         return $this->hasMany('App\Models\Video');
+    }
+
+    //RELATION MANY TO MANY
+    public function roles(){
+        return $this->belongsToMany('App\Models\Role');
     }
 
 }
