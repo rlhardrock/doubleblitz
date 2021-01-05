@@ -10,12 +10,12 @@ class Role extends Model
     use HasFactory;
 
     //RELATION MANY TO MANY
-    public function permits(){
-        return $this->belongsToMany('App\Models\Permit');
+    public function users(){
+        return $this->belongsToMany('App\Models\User');
     }
 
     //RELATION MANY TO MANY
     public function permits(){
-        return $this->belongsToMany('App\Models\User');
+        return $this->belongsToMany('App\Models\Permit');
     }
 }

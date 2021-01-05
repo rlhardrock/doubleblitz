@@ -62,6 +62,8 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    //MASSIVE ASSIGNEMENT
+    //protected $guarded = [];
 
     // RELATION  ONE TO ONE
     public function profile(){
@@ -83,6 +85,11 @@ class User extends Authenticatable
     //RELATION MANY TO MANY
     public function roles(){
         return $this->belongsToMany('App\Models\Role');
+    }
+
+    //RELATION ONE TO ONE POLIMORPHIC
+    public function image(){
+        return $this->morphOne('App\Models\Image','imageable');
     }
 
 }
