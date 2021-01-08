@@ -18,4 +18,9 @@ class Video extends Model
     public function comment(){
         return $this->morphMany('App\Models\Comment','commentable');
     }
+
+    //RELATION MANY TO MANY POLIMORPHIC
+    public function posts(){
+        return $this->morphToMany('App\Models\Post','taggable');
+    }
 }
